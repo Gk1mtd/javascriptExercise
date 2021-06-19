@@ -134,9 +134,9 @@ function translateWord(word)
 //     Das Ergebnis soll per "return" zurückgegeben werden
 
 function ucFirst(word) {
-
+  return word[0].toUpperCase() + word.substring(1)
 }
-
+console.log(ucFirst("blam"))
 // 2c) Aufbauend den Funktionen aus 2a und 2b, entwickle eine weitere
 //     Funktion, die einen ganzen Satz übersetzen kann!
 //     
@@ -160,5 +160,20 @@ function ucFirst(word) {
 //      C++ oder Python entwickeln als in JavaScript.
 
 function translateSentence(sentence) {
-
+  //split sentence
+  let sentenceAsArray = sentence.split(" ")
+  console.log(sentenceAsArray)
+  // translate every word of the array
+  let translatedWordsAsArray = []
+  for (let element of sentenceAsArray)
+  {
+    translatedWordsAsArray.push(translateWord(element))
+  }
+  console.log(translatedWordsAsArray)
+  // make it a sentence again
+  let translatedSentence = translatedWordsAsArray.join(" ")
+  console.log(translatedSentence);
+  //make first letter uppercase
+  console.log(ucFirst(translatedSentence) + ".")
 }
+translateSentence("hallo heute zum sprachkurs")
