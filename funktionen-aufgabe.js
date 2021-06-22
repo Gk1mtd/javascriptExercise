@@ -20,6 +20,11 @@ const courses = [
 
 console.log(getSmallestCourse(courses))
 
+/**
+ * 
+ * @param {string [][]} courses
+ * @returns {number} returns index of the smallest element of the parameter
+ */
 function getSmallestCourse(courses) {
   let smallerCourse = courses[0]
   let smallerCourseIndex = 0
@@ -40,6 +45,10 @@ function getSmallestCourse(courses) {
 addStudent("Peter")
 console.log(courses)
 
+/**
+ * Adds a student to the smallest course
+ * @param {*} name 
+ */
 function addStudent(name) {
   // Hier ermitteln wir, welcher Kurs bisher am wenigsten
   // Teilnehmer hat!
